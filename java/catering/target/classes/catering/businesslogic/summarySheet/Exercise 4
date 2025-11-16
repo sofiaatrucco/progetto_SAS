@@ -1,0 +1,60 @@
+\section*{Esercizio 4}
+\begin{itemize}
+\item[(a)]
+\begin{gather*}
+\[
+    M(t) [0, t]
+\]
+\[
+    P(M(t) = 0) = \xrightarrow{\text{Condizioniamo}} \sum{j=0}^{\infty} P(M(t) = 0 \mid N(t) = j) P(N(t) = j)
+\]
+\[
+    \text{Calcolando} P(N(t) = j) = \frac{(\lambda t)^j}{j!} e^{-\lambda t}
+\]
+\[
+    P(M(t) = 0 \mid N(t) = j) = (1 - 0.4)^j
+\]
+\[
+    P(M(t) = 0) = \sum{j=0}^{\infty} (0.6)^j \frac{(\lambda t)^j}{j!} e^{-\lambda t} = e^{-\lambda t} \sum{j=0}^{\infty} (0.6)^j \frac{(\lambda t)^j}{j!} \\
+    = \xrightarrow{\text{Taylor}} e^{-\lambda t} e^{0.6 \lambda t} = e^{-0.4 \lambda t}
+\]
+\end{gather*}
+
+\item[(b)]
+\begin{gather*}
+\[
+    \mathbb{E}[M(t)] = \mathbb{E}[\mathbb{E}[M(t) \mid N(t)]]
+\]
+\[
+    \mathbb{E}[M(t) \mid N(t) = j] = 0.4 j
+\]
+\[
+    M(t) \mid N(t) = j \sim Binomiale (j, 0.4)
+\]
+\[
+    \mathbb{E}[M(t) \mid N(t)] = N(t) * 0.4 \text{E' una variabile aleatoria}
+\]
+\[
+    \mathbb{E}[N(t) * 0.4] = 0.4 \mathbb{E}[N(t)]
+\]
+\[
+    \mathbb{E}[N(t)] = \lamba t
+\]
+\[
+    \mathbb{E}[M(t)] = 0.4 * \lamba t
+\]
+\end{gather*}
+
+\item[(c)]
+\begin{gather*}
+\[
+    P(M(t) = k \mid N(t) = j)
+\]
+\[
+    \text{Dove M è distribuita come una variabile aleatoria Binomiale(j, 0.4) che modella il numero di successi (vendite) in j prove ripetute indipendenti (i clienti che entrano in negozio).}
+\]
+\[
+    \text{Perciò} \binom{j}{k} (0.4)^k (0.6)^{j-k}
+\]
+
+\end{gather*}
